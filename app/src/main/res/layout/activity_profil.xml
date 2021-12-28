@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ProfilActivity"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:padding="20dp"
+        android:background="@drawable/bottom_round_corner">
+
+        <ImageView
+            android:id="@+id/profil_image"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="100dp"
+            android:src="@drawable/ic_baseline_person_24" />
+
+        <TextView
+            android:id="@+id/profil_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Informations"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:layout_toEndOf="@+id/profil_image"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="10dp"
+            />
+
+        <TextView
+            android:id="@+id/profil_image1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/profil_name"
+            android:text="Personnelles"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:layout_toRightOf="@+id/profil_image"
+            android:layout_marginStart="10dp"
+            android:includeFontPadding="false"
+            />
+
+        <Button
+            android:id="@+id/deconnexion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Déconnecter"
+            android:layout_marginTop="25dp"
+            app:icon="@drawable/ic_baseline_power_settings_new_24"
+            style="@style/Widget.MaterialComponents.Button.TextButton.Icon"
+            android:layout_below="@+id/profil_image1"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:backgroundTint="@color/white"
+            />
+    </RelativeLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="30dp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        app:startIconDrawable="@drawable/ic_baseline_person_24"
+        android:enabled="false">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/prenom_nom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Prenom Nom"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="30dp"
+        android:hint="Email"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        app:startIconDrawable="@drawable/ic_baseline_email_24"
+        android:enabled="false">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/email_profil"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="30dp"
+        android:hint="Telephone"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        app:startIconDrawable="@drawable/ic_baseline_call_24"
+        android:enabled="false">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/telephone_profil"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="30dp"
+        android:hint="Matricule"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        app:startIconDrawable="@drawable/ic_baseline_more_horiz_24"
+        android:enabled="false">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/matricule_profil"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+</LinearLayout>
