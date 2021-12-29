@@ -3,15 +3,19 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="app/src/main/res/drawable/bottom_left_corner.xml" value="0.24166666666666667" />
+        <entry key="app/src/main/res/drawable/bottom_right_corner.xml" value="0.24166666666666667" />
         <entry key="app/src/main/res/drawable/bottom_round_corner.xml" value="0.32407407407407407" />
         <entry key="app/src/main/res/drawable/ic_baseline_date_range_24.xml" value="0.16574074074074074" />
-        <entry key="app/src/main/res/layout/activity_cours.xml" value="0.334375" />
+        <entry key="app/src/main/res/layout/activity_action_details.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_cours.xml" value="0.18" />
         <entry key="app/src/main/res/layout/activity_login.xml" value="0.22" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.22" />
         <entry key="app/src/main/res/layout/activity_profil.xml" value="0.334375" />
         <entry key="app/src/main/res/layout/activity_splash_screen.xml" value="0.334375" />
         <entry key="app/src/main/res/layout/activity_statistiques.xml" value="0.25" />
-        <entry key="app/src/main/res/layout/liste_cours.xml" value="0.334375" />
+        <entry key="app/src/main/res/layout/fragment_details_cours.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/liste_cours.xml" value="0.1" />
       </map>
     </option>
   </component>
