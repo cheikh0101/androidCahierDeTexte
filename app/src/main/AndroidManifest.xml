@@ -14,6 +14,15 @@
         android:theme="@style/Theme.MesCours1"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".DetailsCoursActivity"
+            android:exported="true" />
+        <activity
+            android:name=".CreationSeanceActivity"
+            android:exported="true" />
+        <activity
+            android:name=".MesSeancesActivity"
+            android:exported="true" />
+        <activity
             android:name=".ActionDetailsActivity"
             android:exported="true" />
         <activity

@@ -1,14 +1,18 @@
 package com.example.mescours1
 
 import android.content.Context
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import android.widget.Button
 import android.widget.ImageButton
 import android.widget.TextView
 
 class ActionDetailsActivity : AppCompatActivity() {
     lateinit var details_cours : ImageButton
+    lateinit var creer_seance : ImageButton
+    lateinit var mes_seances : ImageButton
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_action_details)
@@ -20,8 +24,20 @@ class ActionDetailsActivity : AppCompatActivity() {
 
         details_cours = findViewById(R.id.details_cours)
         details_cours.setOnClickListener {
-            var dialog = DetailsCoursFragment()
-            dialog.show(supportFragmentManager, "jkjlkjk")
+            val intent = Intent(this, DetailsCoursActivity::class.java)
+            startActivity(intent)
+        }
+
+        creer_seance = findViewById(R.id.creer_seance)
+        creer_seance.setOnClickListener {
+            val intent = Intent(this, CreationSeanceActivity::class.java)
+            startActivity(intent)
+        }
+
+        mes_seances = findViewById(R.id.mes_seances)
+        mes_seances.setOnClickListener {
+            val intent = Intent(this, MesSeancesActivity::class.java)
+            startActivity(intent)
         }
     }
 }

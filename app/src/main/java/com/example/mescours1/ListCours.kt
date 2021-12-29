@@ -40,7 +40,11 @@ class ListCours (private val newList: ArrayList<CourX>):
 
             val sharedPreferences: SharedPreferences = holder.itemView.context.getSharedPreferences("actions_cours", Context.MODE_PRIVATE)
             val editor: SharedPreferences.Editor = sharedPreferences.edit()
-            editor.apply{ putString("ecIntitule", holder.ecIntitule.text as String)
+            editor.apply{
+                putString("vHoraire", holder.vHoraire.text as String)
+                putString("ecIntitule", holder.ecIntitule.text as String)
+                putString("nomSemestre", holder.nomSemestre.text as String)
+                putString("ueIntitule", currentItem.ueIntitule)
             }.apply()
         }
 
