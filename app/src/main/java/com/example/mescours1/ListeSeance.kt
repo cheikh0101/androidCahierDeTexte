@@ -5,9 +5,9 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.example.mescours1.models.Seance
+import com.example.mescours1.models.SeanceX
 
-class ListeSeance (private val newList: ArrayList<Seance>): RecyclerView.Adapter<ListeSeance.MyViewHolder>(){
+class ListeSeance(private val newList: ArrayList<SeanceX>): RecyclerView.Adapter<ListeSeance.MyViewHolder>(){
 
     class MyViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val titre: TextView = itemView.findViewById(R.id.titre)

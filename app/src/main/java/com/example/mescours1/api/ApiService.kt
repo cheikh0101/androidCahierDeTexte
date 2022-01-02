@@ -27,6 +27,6 @@ interface ApiService {
     @POST("api/sceance/create")
     suspend fun seanceCreate(@Body() body: Seance): Response<SeanceResponse>
 
-    @GET("api/sceance/professeurSeance/{code}/{code1}")
-    suspend fun professeurSeance(@Path("code") code: Int, y: Int):  Response<Seance>
+    @GET("api/seance/professeurSeance/{code}/{code1}")
+    suspend fun professeurSeance(@Path("code") code: Int,@Path("code1") y: Int):  Response<ListeSeance>
 }

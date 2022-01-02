@@ -4,11 +4,10 @@ import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import android.widget.TextView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.mescours1.api.ApiClient
-import com.example.mescours1.models.Seance
+import com.example.mescours1.models.SeanceX
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -27,24 +26,20 @@ class MesSeancesActivity : AppCompatActivity() {
 
         val sharedPreferences1 = this.getSharedPreferences("user_information", Context.MODE_PRIVATE)
         val user_id = sharedPreferences1.getInt("user_id", 2)
-
         val sharedPreferences = this.getSharedPreferences("actions_cours", Context.MODE_PRIVATE)
         val cours_id = sharedPreferences.getInt("id",0)
-
-        println(cours_id)
-
         listeSeance(user_id,cours_id)
     }
 
     private fun listeSeance(x: Int, y: Int){
         val service = ApiClient.makeRetrofitService()
         CoroutineScope(Dispatchers.IO).launch {
-            //val response = service.professeurSeance(x,y);
+            val response = service.professeurSeance(x,y);
             withContext(Dispatchers.Main) {
                 try {
-                    //println(response.body())
-                    //val adapter = ListeSeance(response.body()!!.cours as ArrayList<Seance>)
-                    //newRecyclerView.adapter = adapter
+                    println(response.body())
+                    val adapter = ListeSeance(response.body()!!.seance as ArrayList<SeanceX>)
+                    newRecyclerView.adapter = adapter
                 } catch (e: HttpException) {
                     println("Exception ${e.message}")
                 } catch (e: Throwable) {
