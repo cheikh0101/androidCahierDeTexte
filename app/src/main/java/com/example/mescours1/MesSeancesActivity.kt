@@ -4,6 +4,7 @@ import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import android.widget.TextView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.mescours1.api.ApiClient
@@ -40,6 +41,9 @@ class MesSeancesActivity : AppCompatActivity() {
                     println(response.body())
                     val adapter = ListeSeance(response.body()!!.seance as ArrayList<SeanceX>)
                     newRecyclerView.adapter = adapter
+                    val seance = findViewById<View>(R.id.seance) as TextView
+                    val nbreSeance = adapter.itemCount
+                    seance.setText("Séances (" +nbreSeance+ ")")
                 } catch (e: HttpException) {
                     println("Exception ${e.message}")
                 } catch (e: Throwable) {

@@ -1,5 +1,6 @@
 package com.example.mescours1
 
+import android.media.Image
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -11,6 +12,9 @@ class ListeSeance(private val newList: ArrayList<SeanceX>): RecyclerView.Adapter
 
     class MyViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val titre: TextView = itemView.findViewById(R.id.titre)
+        val description: TextView = itemView.findViewById(R.id.description)
+        val remarque: TextView = itemView.findViewById(R.id.remarque)
+        val nature: TextView = itemView.findViewById(R.id.nature)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
@@ -20,7 +24,11 @@ class ListeSeance(private val newList: ArrayList<SeanceX>): RecyclerView.Adapter
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
         val currentItem = newList[position]
-        holder.titre.text = currentItem.titre    }
+        holder.titre.text = "Titre: " + currentItem.titre
+        holder.description.text = "Description: " + currentItem.description
+        holder.remarque.text = "Remarque: " + currentItem.remarque
+        holder.nature.text = "Nature: " + currentItem.nature
+    }
 
     override fun getItemCount(): Int {
         return newList.size

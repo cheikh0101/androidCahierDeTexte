@@ -1,6 +1,7 @@
 package com.example.mescours1
 
 import android.content.Context
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.*
@@ -22,20 +23,16 @@ class CreationSeanceActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_creation_seance)
-
         val items = listOf("Cours Magistral", "TD", "TP", "Devoir", "Examen", "Autres")
         val adapter = ArrayAdapter(this, R.layout.list_item, items)
         nature = findViewById(R.id.nature)
         nature.setAdapter(adapter)
-
         titre = findViewById(R.id.titre)
         description = findViewById(R.id.description)
         remarque = findViewById(R.id.remarque)
         duree = findViewById(R.id.duree)
-
         val sharedPreferences1 = this.getSharedPreferences("user_information", Context.MODE_PRIVATE)
-        val users_id = sharedPreferences1.getInt("users_id", 3)
-
+        val users_id = sharedPreferences1.getInt("user_id", 3)
         val sharedPreferences = this.getSharedPreferences("actions_cours", Context.MODE_PRIVATE)
         val cours_id = sharedPreferences.getInt("id", 2)
         button = findViewById(R.id.button)
@@ -59,7 +56,7 @@ class CreationSeanceActivity : AppCompatActivity() {
             val response = service.seanceCreate(seance);
             withContext(Dispatchers.Main) {
                 try {
-                    println(response)
+                    println("${response.body()?.message}")
                 } catch (e: HttpException) {
                     println("Exception ${e.message}")
                 } catch (e: Throwable) {

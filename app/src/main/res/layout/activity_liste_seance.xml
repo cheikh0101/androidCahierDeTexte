@@ -1,100 +1,85 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#FFFFFF"
-        tools:ignore="MissingConstraints">
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="260dp"
-            android:orientation="horizontal"
-            android:padding="20dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            tools:ignore="MissingConstraints">
-            <androidx.cardview.widget.CardView
-                android:layout_width="0dp"
-                android:layout_height="200dp"
-                android:layout_margin="10dp"
-                android:layout_weight="1">
+        android:layout_margin="8dp">
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Media -->
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="194dp"
+                app:srcCompat="@drawable/undraw_pair_programming_re_or4x"
+                android:scaleType="centerCrop"
+                android:contentDescription="symbolise nature seance"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                    <!-- Title, secondary and supporting text -->
                 <TextView
                     android:id="@+id/titre"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_centerHorizontal="true"
-                    android:layout_centerVertical="true"
-                    android:layout_marginTop="18dp"
-                    android:paddingStart="20dp"
-                    android:text="Titre Séance"
-                    android:textStyle="bold"
-                    android:textSize="20dp"
-                    tools:ignore="MissingConstraints" />
-
+                    android:textAppearance="?attr/textAppearanceHeadline6"
+                    />
                 <TextView
+                    android:id="@+id/remarque"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_centerHorizontal="true"
-                    android:layout_centerVertical="true"
-                    android:layout_marginTop="50dp"
-                    android:paddingStart="20dp"
-                    android:text="Description"
-                    android:textSize="20dp"
-                    tools:ignore="MissingConstraints" />
-
+                    android:layout_marginTop="8dp"
+                    android:textAppearance="?attr/textAppearanceBody2"
+                    android:textColor="?android:attr/textColorSecondary"
+                    />
                 <TextView
+                    android:id="@+id/description"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_centerHorizontal="true"
-                    android:layout_centerVertical="true"
-                    android:layout_marginTop="90dp"
-                    android:paddingStart="20dp"
-                    android:text="Remarque"
-                    android:textSize="20dp"
-                    tools:ignore="MissingConstraints" />
-
-                <!-- Buttons -->
-                <LinearLayout
+                    android:layout_marginTop="16dp"
+                    android:textAppearance="?attr/textAppearanceBody2"
+                    android:textColor="?android:attr/textColorSecondary"
+                    />
+                <TextView
+                    android:id="@+id/nature"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="150dp"
-                    android:paddingStart="20dp"
-                    android:orientation="horizontal">
+                    android:layout_marginTop="24dp"
+                    android:textAppearance="?attr/textAppearanceBody2"
+                    android:textColor="?android:attr/textColorSecondary"
+                    />
 
-                    <com.google.android.material.chip.ChipGroup
-                        android:id="@+id/chipGroup"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
+            </LinearLayout>
 
-                        <com.google.android.material.chip.Chip
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Durée"
-                            app:chipIcon="@drawable/ic_baseline_access_time_24"/>
-
-                        <com.google.android.material.chip.Chip
-                            android:id="@+id/nomSemestre"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:backgroundTint="@color/colorDefault"
-                            android:text="Nature"/>
-
-                        <com.google.android.material.chip.Chip
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            app:chipIcon="@drawable/ic_baseline_delete_forever_24"
-                            android:text="Supprimer"/>
-                    </com.google.android.material.chip.ChipGroup>
-                </LinearLayout>
-            </androidx.cardview.widget.CardView>
+            <!-- Buttons -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:orientation="horizontal">
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Supprimer"
+                    android:backgroundTint="@color/red"
+                    style="?attr/borderlessButtonStyle"
+                    />
+            </LinearLayout>
         </LinearLayout>
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+</LinearLayout>
