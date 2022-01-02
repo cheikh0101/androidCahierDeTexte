@@ -67,7 +67,7 @@
                         android:textSize="24sp" />
                     <TextView
                         android:id="@+id/nbreTotalCours"
-                        android:layout_width="50dp"
+                        android:layout_width="wrap_content"
                         android:layout_height="50dp"
                         android:layout_centerHorizontal="true"
                         android:layout_centerVertical="true"
@@ -96,12 +96,12 @@
                         android:textSize="24sp" />
                     <TextView
                         android:id="@+id/nbreTotalHeureCours"
-                        android:layout_width="50dp"
+                        android:layout_width="wrap_content"
                         android:layout_height="50dp"
                         android:layout_centerHorizontal="true"
                         android:layout_centerVertical="true"
                         android:text="20"
-                        android:textSize="35dp"/>
+                        android:textSize="30dp"/>
                 </RelativeLayout>
             </androidx.cardview.widget.CardView>
         </LinearLayout>
@@ -139,10 +139,11 @@
                         android:layout_height="wrap_content"
                         android:layout_centerHorizontal="true"
                         android:layout_marginTop="100dp"
-                        android:text="Nombre de Séances"
+                        android:text="Séances"
                         android:textSize="24sp" />
                     <TextView
-                        android:layout_width="50dp"
+                        android:id="@+id/nbreTotalSeance"
+                        android:layout_width="wrap_content"
                         android:layout_height="50dp"
                         android:layout_centerHorizontal="true"
                         android:layout_centerVertical="true"

@@ -7,12 +7,15 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/notebook_perspective_matte"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@mipmap/notebook_perspective_matte"
         android:supportsRtl="true"
         android:theme="@style/Theme.MesCours1"
         android:usesCleartextTraffic="true">
+        <activity
+            android:name=".ListeSeanceActivity"
+            android:exported="true" />
         <activity
             android:name=".DetailsCoursActivity"
             android:exported="true" />

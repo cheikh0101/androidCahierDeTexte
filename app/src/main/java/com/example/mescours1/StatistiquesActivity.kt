@@ -22,7 +22,8 @@ class StatistiquesActivity : AppCompatActivity() {
 
         val id = sharedPreferences1.getInt("user_id", 0)
         nbreCours(id)
-        nbreHeure(id)
+        nbreHeureCours(id)
+        nbreSeance(id)
     }
 
     fun nbreCours(id : Int){
@@ -32,7 +33,7 @@ class StatistiquesActivity : AppCompatActivity() {
             withContext(Dispatchers.Main) {
                 try {
                     val nbreCours = findViewById<TextView>(R.id.nbreTotalCours)
-                    nbreCours.setText("${response.body()?.matricule}")
+                    nbreCours.setText("${response.body()?.nombreCours}")
                 } catch (e: HttpException) {
                     println("Exception ${e.message}")
                 } catch (e: Throwable) {
@@ -42,14 +43,31 @@ class StatistiquesActivity : AppCompatActivity() {
         }
     }
 
-    fun nbreHeure(id : Int){
+    fun nbreHeureCours(id : Int){
         val service = ApiClient.makeRetrofitService()
         CoroutineScope(Dispatchers.IO).launch {
             val response = service.professeurNombreHeureCours(id);
             withContext(Dispatchers.Main) {
                 try {
                     val nbreHeure = findViewById<TextView>(R.id.nbreTotalHeureCours)
-                    nbreHeure.setText("${response.body()?.matricule}")
+                    nbreHeure.setText("${response.body()?.heureCours}")
+                } catch (e: HttpException) {
+                    println("Exception ${e.message}")
+                } catch (e: Throwable) {
+                    println("Ooops: Something else went wrong")
+                }
+            }
+        }
+    }
+
+    fun nbreSeance(id : Int){
+        val service = ApiClient.makeRetrofitService()
+        CoroutineScope(Dispatchers.IO).launch {
+            val response = service.professeurNombreSeance(id);
+            withContext(Dispatchers.Main) {
+                try {
+                    val nbreSeance = findViewById<TextView>(R.id.nbreTotalSeance)
+                    nbreSeance.setText("${response.body()?.duree}")
                 } catch (e: HttpException) {
                     println("Exception ${e.message}")
                 } catch (e: Throwable) {

@@ -9,7 +9,6 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.TextView
-import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.RecyclerView
 import com.example.mescours1.models.CourX
 
@@ -45,6 +44,7 @@ class ListCours (private val newList: ArrayList<CourX>):
                 putString("ecIntitule", holder.ecIntitule.text as String)
                 putString("nomSemestre", holder.nomSemestre.text as String)
                 putString("ueIntitule", currentItem.ueIntitule)
+                putInt("id",currentItem.id)
             }.apply()
         }
 

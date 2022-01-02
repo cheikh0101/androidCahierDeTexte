@@ -18,16 +18,17 @@
             android:layout_centerVertical="true"
             android:layout_centerHorizontal="true"
             android:src="@drawable/notebook_perspective_matte"
+            android:contentDescription="logo"
             />
         <TextView
             android:id="@+id/ecIntitule"
             android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="0dp"
             android:layout_width="wrap_content"
             android:layout_below="@id/logo_image"
             android:text="Nom du Cours"
             android:textStyle="bold"
-            android:textSize="30dp"
+            android:textSize="20dp"
             android:layout_centerVertical="true"
             android:layout_centerHorizontal="true"/>
     </RelativeLayout>

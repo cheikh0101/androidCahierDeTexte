@@ -7,4 +7,6 @@ data class Professeur(
     val nom: String,
     val telephone: String,
     val prenom: String,
+    val heureCours: Int,
+    val nombreCours: Int
 )
