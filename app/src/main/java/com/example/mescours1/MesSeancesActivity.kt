@@ -38,7 +38,6 @@ class MesSeancesActivity : AppCompatActivity() {
             val response = service.professeurSeance(x,y);
             withContext(Dispatchers.Main) {
                 try {
-                    println(response.body())
                     val adapter = ListeSeance(response.body()!!.seance as ArrayList<SeanceX>)
                     newRecyclerView.adapter = adapter
                     val seance = findViewById<View>(R.id.seance) as TextView

@@ -25,6 +25,8 @@
             android:layout_width="wrap_content"
             android:layout_below="@id/profil_image"
             android:textSize="30dp"
+            android:textStyle="bold"
+            android:textColor="#1D2424"
             android:layout_centerVertical="true"
             android:layout_centerHorizontal="true"/>
     </RelativeLayout>

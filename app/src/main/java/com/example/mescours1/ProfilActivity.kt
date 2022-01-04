@@ -4,7 +4,6 @@ import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
 import android.widget.Button
 import android.widget.TextView
 
@@ -42,8 +41,8 @@ class ProfilActivity : AppCompatActivity() {
         val sharedPreferences1 = this
             .getSharedPreferences("user_information", Context.MODE_PRIVATE)
         sharedPreferences1.edit().remove("token").apply()
+        finishAffinity()
         val intent = Intent(this, SplashScreenActivity::class.java)
         startActivity(intent)
-        finish()
     }
 }

@@ -27,6 +27,7 @@
             android:layout_width="wrap_content"
             android:layout_below="@id/logo_image"
             android:text="Nom du Cours"
+            android:textColor="#1D2424"
             android:textStyle="bold"
             android:textSize="20dp"
             android:layout_centerVertical="true"
@@ -66,6 +67,7 @@
                         android:layout_centerHorizontal="true"
                         android:layout_marginTop="100dp"
                         android:text="Mes Séances"
+                        android:textColor="#1D2424"
                         android:textSize="24sp" />
                     <ImageButton
                         android:id="@+id/mes_seances"
@@ -94,6 +96,7 @@
                         android:layout_centerHorizontal="true"
                         android:layout_marginTop="100dp"
                         android:text="Séance"
+                        android:textColor="#1D2424"
                         android:textSize="24sp" />
                     <ImageButton
                         android:id="@+id/creer_seance"
@@ -139,6 +142,7 @@
                         android:layout_centerHorizontal="true"
                         android:layout_marginTop="100dp"
                         android:text="Détails du Cours"
+                        android:textColor="#1D2424"
                         android:textSize="24sp" />
                     <ImageButton
                         android:id="@+id/details_cours"

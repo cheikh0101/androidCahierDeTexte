@@ -26,6 +26,7 @@
             android:layout_below="@id/profil_image"
             android:text="Bienvenue à MesCours"
             android:textStyle="bold"
+            android:textColor="#1D2424"
             android:textSize="30dp"
             android:layout_centerVertical="true"
             android:layout_centerHorizontal="true"/>
@@ -78,6 +79,7 @@
         android:text="Connexion"
         android:textSize="20dp"
         android:backgroundTint="@color/colorDefault"
+        android:textColor="#1D2424"
         />
 
 </LinearLayout>

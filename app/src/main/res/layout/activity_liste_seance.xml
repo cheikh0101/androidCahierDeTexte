@@ -11,12 +11,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="8dp">
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
-
             <!-- Media -->
             <ImageView
                 android:layout_width="match_parent"
@@ -25,18 +23,17 @@
                 android:scaleType="centerCrop"
                 android:contentDescription="symbolise nature seance"
                 />
-
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:padding="16dp">
-
                     <!-- Title, secondary and supporting text -->
                 <TextView
                     android:id="@+id/titre"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:textColor="#1D2424"
                     android:textAppearance="?attr/textAppearanceHeadline6"
                     />
                 <TextView
@@ -44,38 +41,38 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
+                    android:textColor="#1D2424"
                     android:textAppearance="?attr/textAppearanceBody2"
-                    android:textColor="?android:attr/textColorSecondary"
                     />
                 <TextView
                     android:id="@+id/description"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
+                    android:textColor="#1D2424"
                     android:textAppearance="?attr/textAppearanceBody2"
-                    android:textColor="?android:attr/textColorSecondary"
                     />
                 <TextView
                     android:id="@+id/nature"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="24dp"
+                    android:textColor="#1D2424"
                     android:textAppearance="?attr/textAppearanceBody2"
-                    android:textColor="?android:attr/textColorSecondary"
                     />
-
             </LinearLayout>
-
             <!-- Buttons -->
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="8dp"
+                android:layout_margin="6dp"
                 android:orientation="horizontal">
                 <com.google.android.material.button.MaterialButton
+                    android:id="@+id/suppression"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Supprimer"
+                    android:textColor="#1D2424"
                     android:backgroundTint="@color/red"
                     style="?attr/borderlessButtonStyle"
                     />

@@ -24,6 +24,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Nouvelle Séance"
+            android:textColor="#1D2424"
             android:textSize="30sp"
             android:textStyle="bold"
             android:layout_toEndOf="@+id/profil_image"
@@ -39,6 +40,7 @@
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
         android:layout_marginTop="10dp"
+        android:textColor="#1D2424"
         android:hint="Nature de la Séance">
         <AutoCompleteTextView
             android:id="@+id/nature"
@@ -55,6 +57,7 @@
         android:layout_marginEnd="20dp"
         android:layout_marginTop="30dp"
         android:hint="Titre de la Séance"
+        android:textColor="#1D2424"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/titre"
@@ -69,6 +72,7 @@
         android:layout_marginEnd="20dp"
         android:layout_marginTop="30dp"
         android:hint="Description de la Séance"
+        android:textColor="#1D2424"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/description"
@@ -83,6 +87,7 @@
         android:layout_marginEnd="20dp"
         android:layout_marginTop="30dp"
         android:hint="Remarque"
+        android:textColor="#1D2424"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/remarque"
@@ -97,6 +102,7 @@
         android:layout_marginEnd="20dp"
         android:layout_marginTop="30dp"
         android:hint="Durée de la séance"
+        android:textColor="#1D2424"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/duree"
@@ -112,6 +118,7 @@
         android:layout_marginEnd="20dp"
         android:layout_marginTop="30dp"
         android:text="Enregistrer"
+        android:textColor="#1D2424"
         app:icon="@drawable/ic_baseline_save_24"
         android:backgroundTint="@color/colorDefault"
         style="@style/Widget.MaterialComponents.Button.TextButton.Icon" />

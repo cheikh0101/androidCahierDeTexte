@@ -1,12 +1,18 @@
 package com.example.mescours1
 
-import android.media.Image
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.TextView
+import android.widget.Toast
+import androidx.core.content.ContextCompat.startActivity
 import androidx.recyclerview.widget.RecyclerView
+import com.example.mescours1.api.ApiClient
 import com.example.mescours1.models.SeanceX
+import kotlinx.coroutines.*
+import retrofit2.HttpException
 
 class ListeSeance(private val newList: ArrayList<SeanceX>): RecyclerView.Adapter<ListeSeance.MyViewHolder>(){
 
@@ -15,6 +21,7 @@ class ListeSeance(private val newList: ArrayList<SeanceX>): RecyclerView.Adapter
         val description: TextView = itemView.findViewById(R.id.description)
         val remarque: TextView = itemView.findViewById(R.id.remarque)
         val nature: TextView = itemView.findViewById(R.id.nature)
+        val suppression: Button = itemView.findViewById(R.id.suppression)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
@@ -28,6 +35,21 @@ class ListeSeance(private val newList: ArrayList<SeanceX>): RecyclerView.Adapter
         holder.description.text = "Description: " + currentItem.description
         holder.remarque.text = "Remarque: " + currentItem.remarque
         holder.nature.text = "Nature: " + currentItem.nature
+        holder.suppression.setOnClickListener {
+            val service = ApiClient.makeRetrofitService()
+            CoroutineScope(Dispatchers.IO).launch {
+                val response = service.deleteSeance(currentItem.id);
+                withContext(Dispatchers.Main) {
+                    try {
+                        println("seance supprimee avec succes")
+                    } catch (e: HttpException) {
+                        println("Exception ${e.message}")
+                    } catch (e: Throwable) {
+                        println("Ooops: Something else went wrong")
+                    }
+                }
+            }
+        }
     }
 
     override fun getItemCount(): Int {

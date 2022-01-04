@@ -1,5 +1,6 @@
 package com.example.mescours1
 
+import android.annotation.SuppressLint
 import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -26,6 +27,7 @@ class StatistiquesActivity : AppCompatActivity() {
         nbreSeance(id)
     }
 
+    @SuppressLint("SetTextI18n")
     fun nbreCours(id : Int){
         val service = ApiClient.makeRetrofitService()
         CoroutineScope(Dispatchers.IO).launch {
@@ -33,7 +35,7 @@ class StatistiquesActivity : AppCompatActivity() {
             withContext(Dispatchers.Main) {
                 try {
                     val nbreCours = findViewById<TextView>(R.id.nbreTotalCours)
-                    nbreCours.setText("${response.body()?.nombreCours}")
+                    nbreCours.setText("0" + "${response.body()?.nombreCours}")
                 } catch (e: HttpException) {
                     println("Exception ${e.message}")
                 } catch (e: Throwable) {

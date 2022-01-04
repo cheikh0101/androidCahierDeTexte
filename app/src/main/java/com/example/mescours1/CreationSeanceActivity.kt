@@ -49,14 +49,15 @@ class CreationSeanceActivity : AppCompatActivity() {
             }
         }
     }
-
     private fun seanceCreate(seance: Seance) {
         val service = ApiClient.makeRetrofitService()
         CoroutineScope(Dispatchers.IO).launch {
             val response = service.seanceCreate(seance);
             withContext(Dispatchers.Main) {
                 try {
-                    println("${response.body()?.message}")
+                    val intent = Intent(this@CreationSeanceActivity, MesSeancesActivity::class.java)
+                    startActivity(intent)
+                    finish()
                 } catch (e: HttpException) {
                     println("Exception ${e.message}")
                 } catch (e: Throwable) {
