@@ -35,7 +35,7 @@ class StatistiquesActivity : AppCompatActivity() {
             withContext(Dispatchers.Main) {
                 try {
                     val nbreCours = findViewById<TextView>(R.id.nbreTotalCours)
-                    nbreCours.setText("0" + "${response.body()?.nombreCours}")
+                    nbreCours.setText("0" + "${response.body()?.nombreCours}" + " Cours")
                 } catch (e: HttpException) {
                     println("Exception ${e.message}")
                 } catch (e: Throwable) {
@@ -45,6 +45,7 @@ class StatistiquesActivity : AppCompatActivity() {
         }
     }
 
+    @SuppressLint("SetTextI18n")
     fun nbreHeureCours(id : Int){
         val service = ApiClient.makeRetrofitService()
         CoroutineScope(Dispatchers.IO).launch {
@@ -52,7 +53,7 @@ class StatistiquesActivity : AppCompatActivity() {
             withContext(Dispatchers.Main) {
                 try {
                     val nbreHeure = findViewById<TextView>(R.id.nbreTotalHeureCours)
-                    nbreHeure.setText("${response.body()?.heureCours}")
+                    nbreHeure.setText("${response.body()?.heureCours}" + "H")
                 } catch (e: HttpException) {
                     println("Exception ${e.message}")
                 } catch (e: Throwable) {
@@ -62,6 +63,7 @@ class StatistiquesActivity : AppCompatActivity() {
         }
     }
 
+    @SuppressLint("SetTextI18n")
     fun nbreSeance(id : Int){
         val service = ApiClient.makeRetrofitService()
         CoroutineScope(Dispatchers.IO).launch {
@@ -69,7 +71,7 @@ class StatistiquesActivity : AppCompatActivity() {
             withContext(Dispatchers.Main) {
                 try {
                     val nbreSeance = findViewById<TextView>(R.id.nbreTotalSeance)
-                    nbreSeance.setText("${response.body()?.duree}")
+                    nbreSeance.setText("${response.body()?.duree}" + " Séances")
                 } catch (e: HttpException) {
                     println("Exception ${e.message}")
                 } catch (e: Throwable) {

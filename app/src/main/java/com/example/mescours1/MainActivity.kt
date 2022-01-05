@@ -6,12 +6,13 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ImageButton
 import android.widget.TextView
+import androidx.cardview.widget.CardView
 
 class MainActivity : AppCompatActivity() {
-    lateinit var cours: ImageButton;
-    lateinit var agenda: ImageButton;
-    lateinit var statistiques: ImageButton;
-    lateinit var profil: ImageButton;
+    lateinit var cours: CardView;
+    lateinit var agenda: CardView;
+    lateinit var statistiques: CardView;
+    lateinit var profil: CardView;
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
