@@ -32,7 +32,7 @@ class DetailsCoursActivity : AppCompatActivity() {
 
         val vHoraire = sharedPreferences1.getString("vHoraire", null)
         val vHorair = findViewById<TextView>(R.id.vHoraire)
-        vHorair.setText("Volume Horaire: " + vHoraire)
+        vHorair.setText("Volume Horaire: " + vHoraire +"H")
 
         val ueIntitule = sharedPreferences1.getString("ueIntitule", null)
         val ueIntitul = findViewById<TextView>(R.id.ueIntitule)

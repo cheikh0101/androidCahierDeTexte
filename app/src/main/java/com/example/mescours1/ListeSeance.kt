@@ -21,6 +21,7 @@ class ListeSeance(private val newList: ArrayList<SeanceX>): RecyclerView.Adapter
         val description: TextView = itemView.findViewById(R.id.description)
         val remarque: TextView = itemView.findViewById(R.id.remarque)
         val nature: TextView = itemView.findViewById(R.id.nature)
+        val duree: TextView = itemView.findViewById(R.id.duree)
         val suppression: Button = itemView.findViewById(R.id.suppression)
     }
 
@@ -35,6 +36,7 @@ class ListeSeance(private val newList: ArrayList<SeanceX>): RecyclerView.Adapter
         holder.description.text = "Description: " + currentItem.description
         holder.remarque.text = "Remarque: " + currentItem.remarque
         holder.nature.text = "Nature: " + currentItem.nature
+        holder.duree.text = "Durée: " + currentItem.duree
         holder.suppression.setOnClickListener {
             val service = ApiClient.makeRetrofitService()
             CoroutineScope(Dispatchers.IO).launch {

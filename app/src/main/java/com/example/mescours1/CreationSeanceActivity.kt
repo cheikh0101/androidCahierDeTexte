@@ -2,8 +2,10 @@ package com.example.mescours1
 
 import android.content.Context
 import android.content.Intent
+import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import android.widget.*
 import com.example.mescours1.api.ApiClient
 import com.example.mescours1.models.Seance
@@ -12,14 +14,19 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import retrofit2.HttpException
+import android.widget.TimePicker
+import androidx.annotation.RequiresApi
+
 
 class CreationSeanceActivity : AppCompatActivity() {
     lateinit var nature: AutoCompleteTextView
     lateinit var titre: TextView;
     lateinit var description: TextView
     lateinit var remarque: TextView
-    lateinit var duree: TextView
+    lateinit var duree: TimePicker
     lateinit var button: Button;
+    lateinit var x: String
+    @RequiresApi(Build.VERSION_CODES.M)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_creation_seance)
@@ -45,7 +52,8 @@ class CreationSeanceActivity : AppCompatActivity() {
                 ).show()
             }
             else{
-                this.seanceCreate(Seance(nature.text.toString(), titre.text.toString(), description.text.toString(), remarque.text.toString(), duree.text.toString(), users_id, cours_id ))
+                x = duree.hour.toString() + "h : " + duree.minute.toString() + " mn"
+                this.seanceCreate(Seance(nature.text.toString(), titre.text.toString(), description.text.toString(), remarque.text.toString(), x, users_id, cours_id ))
             }
         }
     }

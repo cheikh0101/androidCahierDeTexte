@@ -50,6 +50,7 @@
             <androidx.cardview.widget.CardView
                 android:layout_width="0dp"
                 app:cardElevation="5dp"
+                android:backgroundTint="@color/colorDefault"
                 app:cardMaxElevation="12dp"
                 app:cardPreventCornerOverlap="true"
                 android:layout_height="match_parent"
@@ -67,13 +68,14 @@
                         android:layout_centerHorizontal="true"
                         android:layout_marginTop="100dp"
                         android:text="Cours"
+                        android:textStyle="bold"
                         android:textSize="24sp" />
                     <ImageView
                         android:layout_width="64dp"
                         android:layout_height="64dp"
                         android:layout_centerHorizontal="true"
                         android:layout_centerVertical="true"
-                       android:src="@drawable/books"/>
+                       android:src="@drawable/_04_language"/>
                 </RelativeLayout>
             </androidx.cardview.widget.CardView>
             <androidx.cardview.widget.CardView
@@ -81,6 +83,7 @@
                 app:cardElevation="5dp"
                 app:cardMaxElevation="12dp"
                 app:cardPreventCornerOverlap="true"
+                android:backgroundTint="@color/colorDefault"
                 android:layout_height="match_parent"
                 android:layout_margin="10dp"
                 android:layout_weight="1"
@@ -95,10 +98,11 @@
                         android:layout_centerHorizontal="true"
                         android:layout_marginTop="100dp"
                         android:textColor="#1D2424"
+                        android:textStyle="bold"
                         android:text="Heures"
                         android:textSize="24sp" />
                     <ImageView
-                        android:src="@drawable/time"
+                        android:src="@drawable/_01_clock"
                         android:layout_width="64dp"
                         android:layout_height="64dp"
                         android:layout_centerHorizontal="true"
@@ -128,6 +132,7 @@
                 app:cardElevation="5dp"
                 app:cardMaxElevation="12dp"
                 app:cardPreventCornerOverlap="true"
+                android:backgroundTint="@color/colorDefault"
                 android:layout_height="match_parent"
                 android:layout_margin="10dp"
                 android:layout_weight="1"
@@ -140,12 +145,13 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textColor="#1D2424"
+                        android:textStyle="bold"
                         android:layout_centerHorizontal="true"
                         android:layout_marginTop="100dp"
                         android:text="Séances"
                         android:textSize="24sp" />
                     <ImageView
-                        android:src="@drawable/resource_class"
+                        android:src="@drawable/_02_workshop"
                         android:layout_width="64dp"
                         android:layout_height="64dp"
                         android:layout_centerHorizontal="true"

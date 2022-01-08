@@ -33,6 +33,7 @@
                     android:id="@+id/titre"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:hint="titre"
                     android:textColor="#1D2424"
                     android:textAppearance="?attr/textAppearanceHeadline6"
                     />
@@ -41,6 +42,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
+                    android:hint="remarque"
                     android:textColor="#1D2424"
                     android:textAppearance="?attr/textAppearanceBody2"
                     />
@@ -48,7 +50,8 @@
                     android:id="@+id/description"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
+                    android:layout_marginTop="10dp"
+                    android:hint="description"
                     android:textColor="#1D2424"
                     android:textAppearance="?attr/textAppearanceBody2"
                     />
@@ -56,7 +59,17 @@
                     android:id="@+id/nature"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="24dp"
+                    android:layout_marginTop="12dp"
+                    android:textColor="#1D2424"
+                    android:hint="nature"
+                    android:textAppearance="?attr/textAppearanceBody2"
+                    />
+                <TextView
+                    android:id="@+id/duree"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="14dp"
+                    android:hint="duree"
                     android:textColor="#1D2424"
                     android:textAppearance="?attr/textAppearanceBody2"
                     />
@@ -67,15 +80,25 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="6dp"
                 android:orientation="horizontal">
-                <com.google.android.material.button.MaterialButton
-                    android:id="@+id/suppression"
-                    android:layout_width="wrap_content"
+                <Button
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="60dp"
+                    android:text="Editer"
+                    android:textColor="#1D2424"
+                    android:backgroundTint="@color/design_default_color_primary"
+                    style="@style/Widget.MaterialComponents.Button.TextButton.Icon" />
+                <Button
+                    android:id="@+id/suppression"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
                     android:text="Supprimer"
                     android:textColor="#1D2424"
                     android:backgroundTint="@color/red"
-                    style="?attr/borderlessButtonStyle"
-                    />
+                    style="@style/Widget.MaterialComponents.Button.TextButton.Icon" />
             </LinearLayout>
         </LinearLayout>
     </com.google.android.material.card.MaterialCardView>

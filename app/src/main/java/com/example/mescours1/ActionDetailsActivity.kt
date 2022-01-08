@@ -8,11 +8,12 @@ import android.view.View
 import android.widget.Button
 import android.widget.ImageButton
 import android.widget.TextView
+import androidx.cardview.widget.CardView
 
 class ActionDetailsActivity : AppCompatActivity() {
-    lateinit var details_cours : ImageButton
-    lateinit var creer_seance : ImageButton
-    lateinit var mes_seances : ImageButton
+    lateinit var details_cours : CardView
+    lateinit var creer_seance : CardView
+    lateinit var mes_seances : CardView
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_action_details)
