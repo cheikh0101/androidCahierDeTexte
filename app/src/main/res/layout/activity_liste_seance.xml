@@ -17,10 +17,10 @@
             android:orientation="vertical">
             <!-- Media -->
             <ImageView
-                android:layout_width="match_parent"
+                android:layout_width="349dp"
                 android:layout_height="194dp"
-                app:srcCompat="@drawable/undraw_pair_programming_re_or4x"
-                android:scaleType="centerCrop"
+                app:srcCompat="@drawable/_01_class"
+                android:layout_margin="20dp"
                 android:contentDescription="symbolise nature seance"
                 />
             <LinearLayout
@@ -87,7 +87,8 @@
                     android:layout_marginEnd="60dp"
                     android:text="Editer"
                     android:textColor="#1D2424"
-                    android:backgroundTint="@color/design_default_color_primary"
+                    app:icon="@drawable/_05_edit_1"
+                    android:backgroundTint="@color/purple_200"
                     style="@style/Widget.MaterialComponents.Button.TextButton.Icon" />
                 <Button
                     android:id="@+id/suppression"
@@ -96,8 +97,9 @@
                     android:layout_marginStart="20dp"
                     android:layout_marginEnd="20dp"
                     android:text="Supprimer"
-                    android:textColor="#1D2424"
                     android:backgroundTint="@color/red"
+                    android:textColor="#1D2424"
+                    app:icon="@drawable/_02_trash"
                     style="@style/Widget.MaterialComponents.Button.TextButton.Icon" />
             </LinearLayout>
         </LinearLayout>
