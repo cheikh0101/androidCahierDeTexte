@@ -17,8 +17,9 @@
             android:orientation="vertical">
             <!-- Media -->
             <ImageView
-                android:layout_width="349dp"
-                android:layout_height="194dp"
+                android:id="@+id/image"
+                android:layout_width="360dp"
+                android:layout_height="120dp"
                 app:srcCompat="@drawable/_01_class"
                 android:layout_margin="20dp"
                 android:contentDescription="symbolise nature seance"
@@ -78,27 +79,23 @@
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="6dp"
                 android:orientation="horizontal">
                 <Button
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="20dp"
-                    android:layout_marginEnd="60dp"
-                    android:text="Editer"
+                    android:text="Éditer"
+                    android:layout_marginLeft="50dp"
                     android:textColor="#1D2424"
                     app:icon="@drawable/_05_edit_1"
-                    android:backgroundTint="@color/purple_200"
+                    android:backgroundTint="@color/colorDefault"
                     style="@style/Widget.MaterialComponents.Button.TextButton.Icon" />
                 <Button
                     android:id="@+id/suppression"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="20dp"
-                    android:layout_marginEnd="20dp"
                     android:text="Supprimer"
+                    android:layout_marginLeft="50dp"
                     android:backgroundTint="@color/red"
-                    android:textColor="#1D2424"
                     app:icon="@drawable/_02_trash"
                     style="@style/Widget.MaterialComponents.Button.TextButton.Icon" />
             </LinearLayout>

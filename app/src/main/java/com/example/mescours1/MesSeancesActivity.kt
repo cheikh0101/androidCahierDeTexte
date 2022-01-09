@@ -16,15 +16,13 @@ import kotlinx.coroutines.withContext
 import retrofit2.HttpException
 
 class MesSeancesActivity : AppCompatActivity() {
-    private lateinit var newRecyclerView: RecyclerView
+            private lateinit var newRecyclerView: RecyclerView
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_mes_seances)
-
         newRecyclerView = findViewById<View>(R.id.recyclerView) as RecyclerView
         newRecyclerView.layoutManager = LinearLayoutManager(this)
         newRecyclerView.setHasFixedSize(true)
-
         val sharedPreferences1 = this.getSharedPreferences("user_information", Context.MODE_PRIVATE)
         val user_id = sharedPreferences1.getInt("user_id", 2)
         val sharedPreferences = this.getSharedPreferences("actions_cours", Context.MODE_PRIVATE)
@@ -38,7 +36,7 @@ class MesSeancesActivity : AppCompatActivity() {
             val response = service.professeurSeance(x,y);
             withContext(Dispatchers.Main) {
                 try {
-                    val adapter = ListeSeance(response.body()!!.seance as ArrayList<SeanceX>)
+                    val adapter = ListeSeance(this@MesSeancesActivity, response.body()!!.seance as ArrayList<SeanceX>)
                     newRecyclerView.adapter = adapter
                     val seance = findViewById<View>(R.id.seance) as TextView
                     val nbreSeance = adapter.itemCount
