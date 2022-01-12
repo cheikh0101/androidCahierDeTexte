@@ -25,6 +25,7 @@ class ListeSeance(val contex: Context, private val newList: ArrayList<SeanceX>):
         val duree: TextView = itemView.findViewById(R.id.duree)
         val suppression: Button = itemView.findViewById(R.id.suppression)
         val image: ImageView = itemView.findViewById(R.id.image)
+        val created_at: TextView = itemView.findViewById(R.id.created_at)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
@@ -57,10 +58,11 @@ class ListeSeance(val contex: Context, private val newList: ArrayList<SeanceX>):
                 withContext(Dispatchers.Main) {
                     try {
                         println("seance supprimee avec succes")
-                        newList.drop(position)
-                        notifyItemRemoved(position)
-                        val intent = Intent(contex, MesSeancesActivity::class.java)
-                        startActivity(contex, intent, null)
+                        //newList.drop(position)
+                        //notifyItemRemoved(position)
+                        newList.removeAt(position)
+                        //val intent = Intent(contex, ActionDetailsActivity::class.java)
+                        //startActivity(contex, intent, null)
                     } catch (e: HttpException) {
                         println("Exception ${e.message}")
                     } catch (e: Throwable) {
@@ -69,6 +71,7 @@ class ListeSeance(val contex: Context, private val newList: ArrayList<SeanceX>):
                 }
             }
         }
+        holder.created_at.text = "Créé le: " + currentItem.created_at
     }
 
     override fun getItemCount(): Int {

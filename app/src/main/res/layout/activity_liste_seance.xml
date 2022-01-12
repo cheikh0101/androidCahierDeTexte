@@ -74,6 +74,16 @@
                     android:textColor="#1D2424"
                     android:textAppearance="?attr/textAppearanceBody2"
                     />
+
+                <TextView
+                    android:id="@+id/created_at"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="14dp"
+                    android:hint="cree le.."
+                    android:textColor="#1D2424"
+                    android:textAppearance="?attr/textAppearanceBody2"
+                    />
             </LinearLayout>
             <!-- Buttons -->
             <LinearLayout

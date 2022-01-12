@@ -13,6 +13,7 @@ class MainActivity : AppCompatActivity() {
     lateinit var agenda: CardView;
     lateinit var statistiques: CardView;
     lateinit var profil: CardView;
+    lateinit var classe: CardView;
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -43,5 +44,10 @@ class MainActivity : AppCompatActivity() {
             startActivity(i)
         }
 
+        classe = findViewById(R.id.classe)
+        classe.setOnClickListener {
+            val intent = Intent(this, ClasseActivity::class.java)
+            startActivity(intent)
+        }
     }
 }

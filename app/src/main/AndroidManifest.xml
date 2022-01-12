@@ -14,6 +14,9 @@
         android:theme="@style/Theme.MesCours1"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".ClasseActivity"
+            android:exported="true" />
+        <activity
             android:name=".ListeSeanceActivity"
             android:exported="true" />
         <activity

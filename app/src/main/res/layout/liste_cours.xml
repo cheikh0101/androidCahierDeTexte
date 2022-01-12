@@ -23,7 +23,7 @@
                 android:layout_height="194dp"
                 android:layout_margin="20dp"
                 android:contentDescription="Image d'un cours"
-                app:srcCompat="@drawable/_08_book_2" />
+                app:srcCompat="@drawable/_03_open_book" />
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

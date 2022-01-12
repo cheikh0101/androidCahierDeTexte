@@ -32,8 +32,6 @@ class ListCours (private val newList: ArrayList<CourX>):
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
         val currentItem = newList[position]
         holder.ecIntitule.text = currentItem.ecIntitule
-        //holder.vHoraire.text = currentItem.vHoraire.toString() + 'H'
-        //holder.nomSemestre.text = currentItem.nomSemestre
         if(currentItem.nomSemestre == "semestre 1" || currentItem.nomSemestre == "semestre 2") {
             holder.nomNiveau.setText("Niveau: Licence 1")
         }else if(currentItem.nomSemestre == "semestre 3" || currentItem.nomSemestre == "semestre 4"){
@@ -54,7 +52,6 @@ class ListCours (private val newList: ArrayList<CourX>):
                 putInt("id",currentItem.id)
             }.apply()
         }
-
     }
 
     override fun getItemCount(): Int {
