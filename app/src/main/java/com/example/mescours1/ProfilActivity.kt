@@ -2,6 +2,7 @@ package com.example.mescours1
 
 import android.content.Context
 import android.content.Intent
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
@@ -9,12 +10,21 @@ import android.widget.TextView
 
 class ProfilActivity : AppCompatActivity() {
     lateinit var deconnexion : Button
+    lateinit var apropos: Button
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_profil)
         deconnexion=findViewById(R.id.deconnexion)
         deconnexion.setOnClickListener{
             deconnexion()
+        }
+
+        apropos = findViewById(R.id.apropos)
+        apropos.setOnClickListener {
+            val url = "https://mescours-c9cfe.web.app/"
+            val i = Intent(Intent.ACTION_VIEW)
+            i.data = Uri.parse(url)
+            startActivity(i)
         }
         val sharedPreferences1 = this
             .getSharedPreferences("user_information", Context.MODE_PRIVATE)
@@ -35,6 +45,7 @@ class ProfilActivity : AppCompatActivity() {
         val matricule = sharedPreferences1.getString("matricule", null)
         val matricule_profil = findViewById<TextView>(R.id.matricule_profil)
         matricule_profil.setText(matricule)
+
     }
 
     fun deconnexion(){

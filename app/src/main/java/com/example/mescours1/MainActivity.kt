@@ -7,6 +7,10 @@ import android.os.Bundle
 import android.widget.ImageButton
 import android.widget.TextView
 import androidx.cardview.widget.CardView
+import android.provider.CalendarContract
+
+
+
 
 class MainActivity : AppCompatActivity() {
     lateinit var cours: CardView;
@@ -38,10 +42,11 @@ class MainActivity : AppCompatActivity() {
 
         agenda = findViewById(R.id.agenda)
         agenda.setOnClickListener {
-            val url = "https://www.google.com/intl/fr/calendar/about/"
-            val i = Intent(Intent.ACTION_VIEW)
-            i.data = Uri.parse(url)
-            startActivity(i)
+            val calendarUri = CalendarContract.CONTENT_URI
+                .buildUpon()
+                .appendPath("time")
+                .build()
+            startActivity(Intent(Intent.ACTION_VIEW, calendarUri))
         }
 
         classe = findViewById(R.id.classe)
