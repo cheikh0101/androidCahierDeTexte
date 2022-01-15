@@ -122,7 +122,7 @@
                     app:icon="@drawable/ic_baseline_power_settings_new_24"
                     style="@style/Widget.MaterialComponents.Button.TextButton.Icon"
                     android:backgroundTint="@color/red"
-                    android:textColor="#1D2424"
+                    android:textColor="@color/white"
                     />
             </com.google.android.material.textfield.TextInputLayout>
         </LinearLayout>

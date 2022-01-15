@@ -49,10 +49,10 @@ class MainActivity : AppCompatActivity() {
             startActivity(Intent(Intent.ACTION_VIEW, calendarUri))
         }
 
-        classe = findViewById(R.id.classe)
+        /*classe = findViewById(R.id.classe)
         classe.setOnClickListener {
             val intent = Intent(this, ClasseActivity::class.java)
             startActivity(intent)
-        }
+        }*/
     }
 }

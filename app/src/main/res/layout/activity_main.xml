@@ -133,6 +133,7 @@
                     app:layout_constraintHorizontal_bias="0.0"
                     app:layout_constraintStart_toStartOf="parent"
                     tools:ignore="MissingConstraints">
+                    <!--
                     <androidx.cardview.widget.CardView
                         android:id="@+id/classe"
                         android:layout_width="0dp"
@@ -163,7 +164,7 @@
                                 android:layout_centerVertical="true"
                                 android:src="@drawable/_08_book_2"/>
                         </RelativeLayout>
-                    </androidx.cardview.widget.CardView>
+                    </androidx.cardview.widget.CardView> -->
                     <androidx.cardview.widget.CardView
                         android:id="@+id/statistiques"
                         android:layout_width="0dp"
@@ -195,23 +196,7 @@
                                 android:src="@drawable/_05_diagram"/>
                         </RelativeLayout>
                     </androidx.cardview.widget.CardView>
-                </LinearLayout>
-            </androidx.constraintlayout.widget.ConstraintLayout>
 
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="#FFFFFF"
-                android:layout_marginTop="30dp">
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="175dp"
-                    android:orientation="horizontal"
-                    android:padding="10dp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.0"
-                    app:layout_constraintStart_toStartOf="parent"
-                    tools:ignore="MissingConstraints">
                     <androidx.cardview.widget.CardView
                         android:id="@+id/profil"
                         android:layout_width="0dp"
